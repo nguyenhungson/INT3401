@@ -1,0 +1,3 @@
+matchup_id,group,game,slot,agent,depth,iterations,c,rollout,tactical,planned_games,completed_games,wins,draws,losses,games_as_x,wins_as_x,win_rate_as_x,games_as_o,wins_as_o,win_rate_as_o,avg_game_moves,avg_move_ms,unique_move_sequences,repeated_move_sequences,both_agents_deterministic
+rollout__caro__random_vs_heuristic,rollout,caro,A,mcts,,300,1.4,random,False,20,20,6,0,14,10,5,0.5,10,1,0.1,19.0,103.53328996,20,0,False
+rollout__caro__random_vs_heuristic,rollout,caro,B,mcts,,300,1.4,heuristic,False,20,20,14,0,6,10,9,0.9,10,5,0.5,19.0,200.30855963,20,0,False

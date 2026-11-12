@@ -1,0 +1,9 @@
+matchup_id,group,game,slot,agent,depth,iterations,c,rollout,tactical,planned_games,completed_games,wins,draws,losses,games_as_x,wins_as_x,win_rate_as_x,games_as_o,wins_as_o,win_rate_as_o,avg_game_moves,avg_move_ms,unique_move_sequences,repeated_move_sequences,both_agents_deterministic
+iterations__caro__mcts_100,iterations,caro,A,alphabeta,2,,,,False,20,20,20,0,0,10,10,1.0,10,10,1.0,13.0,6.17233281,20,0,False
+iterations__caro__mcts_100,iterations,caro,B,mcts,,100,1.4,random,False,20,20,0,0,20,10,0,0.0,10,0,0.0,13.0,35.08894046,20,0,False
+iterations__caro__mcts_300,iterations,caro,A,alphabeta,2,,,,False,20,20,20,0,0,10,10,1.0,10,10,1.0,13.7,6.69424886,20,0,False
+iterations__caro__mcts_300,iterations,caro,B,mcts,,300,1.4,random,False,20,20,0,0,20,10,0,0.0,10,0,0.0,13.7,106.02431752,20,0,False
+iterations__caro__mcts_500,iterations,caro,A,alphabeta,2,,,,False,20,20,20,0,0,10,10,1.0,10,10,1.0,15.5,7.53784542,20,0,False
+iterations__caro__mcts_500,iterations,caro,B,mcts,,500,1.4,random,False,20,20,0,0,20,10,0,0.0,10,0,0.0,15.5,173.16765776,20,0,False
+iterations__caro__mcts_1000,iterations,caro,A,alphabeta,2,,,,False,20,20,20,0,0,10,10,1.0,10,10,1.0,15.3,6.84869356,20,0,False
+iterations__caro__mcts_1000,iterations,caro,B,mcts,,1000,1.4,random,False,20,20,0,0,20,10,0,0.0,10,0,0.0,15.3,343.91878136,20,0,False

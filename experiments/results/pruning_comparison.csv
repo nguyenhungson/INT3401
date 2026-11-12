@@ -1,0 +1,7 @@
+state,algorithm,player,depth,move,search_value,nodes,time_ms
+1,Minimax,X,3,"(6, 4)",176,1885,752.948
+1,AlphaBeta,X,3,"(6, 4)",176,526,170.547
+2,Minimax,O,3,"(4, 5)",3084,1885,672.169
+2,AlphaBeta,O,3,"(4, 5)",3084,278,106.865
+3,Minimax,X,3,"(3, 4)",2860,1885,646.294
+3,AlphaBeta,X,3,"(3, 4)",2860,372,134.934

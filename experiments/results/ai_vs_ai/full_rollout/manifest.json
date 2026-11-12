@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "run_id": "full_rollout",
+  "preset": "full",
+  "groups": [
+    "rollout"
+  ],
+  "games": [
+    "caro"
+  ],
+  "seed_schedule": [
+    [
+      2026,
+      2027
+    ],
+    [
+      2028,
+      2029
+    ],
+    [
+      2030,
+      2031
+    ],
+    [
+      2032,
+      2033
+    ],
+    [
+      2034,
+      2035
+    ],
+    [
+      2036,
+      2037
+    ],
+    [
+      2038,
+      2039
+    ],
+    [
+      2040,
+      2041
+    ],
+    [
+      2042,
+      2043
+    ],
+    [
+      2044,
+      2045
+    ]
+  ],
+  "replay_seeds": {
+    "X": 42,
+    "O": 43
+  },
+  "coordinate_base": 0,
+  "x_moves_first": true,
+  "matchups": [
+    {
+      "matchup_id": "rollout__caro__random_vs_heuristic",
+      "group": "rollout",
+      "game": "caro",
+      "agent_a": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "heuristic",
+        "tactical": false
+      }
+    }
+  ],
+  "planned_games": 20,
+  "completed_games": 20,
+  "status": "complete",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-m",
+    "experiments.ai_vs_ai_matrix",
+    "--preset",
+    "full",
+    "--group",
+    "rollout",
+    "--run-id",
+    "full_rollout"
+  ],
+  "created_at_utc": "2026-11-10T19:08:16+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "pending_games": 0,
+  "missing_game_ids": [],
+  "error_attempts": 0,
+  "updated_at_utc": "2026-11-10T19:09:14+00:00"
+}

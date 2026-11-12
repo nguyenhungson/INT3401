@@ -1,0 +1,11 @@
+{"move": [4, 4], "elapsed_ms": 290.2174999999261, "nodes": 804, "depth": 5, "iterations": null, "algorithm": "AlphaBeta", "search_value": 160, "turn": 1, "player": "X"}
+{"move": [5, 4], "elapsed_ms": 1180.1783999999316, "nodes": 1001, "depth": null, "iterations": 1000, "algorithm": "MCTS", "search_value": null, "turn": 2, "player": "O"}
+{"move": [3, 3], "elapsed_ms": 2660.0392999998803, "nodes": 7838, "depth": 5, "iterations": null, "algorithm": "AlphaBeta", "search_value": 562, "turn": 3, "player": "X"}
+{"move": [3, 5], "elapsed_ms": 969.041400000151, "nodes": 1001, "depth": null, "iterations": 1000, "algorithm": "MCTS", "search_value": null, "turn": 4, "player": "O"}
+{"move": [4, 3], "elapsed_ms": 2172.8374000003896, "nodes": 6202, "depth": 5, "iterations": null, "algorithm": "AlphaBeta", "search_value": 2670, "turn": 5, "player": "X"}
+{"move": [3, 4], "elapsed_ms": 931.6831000001002, "nodes": 1001, "depth": null, "iterations": 1000, "algorithm": "MCTS", "search_value": null, "turn": 6, "player": "O"}
+{"move": [5, 5], "elapsed_ms": 2415.550499999881, "nodes": 7673, "depth": 5, "iterations": null, "algorithm": "AlphaBeta", "search_value": 3756, "turn": 7, "player": "X"}
+{"move": [3, 2], "elapsed_ms": 862.759300000107, "nodes": 1001, "depth": null, "iterations": 1000, "algorithm": "MCTS", "search_value": null, "turn": 8, "player": "O"}
+{"move": [2, 2], "elapsed_ms": 1327.961100000266, "nodes": 3906, "depth": 5, "iterations": null, "algorithm": "AlphaBeta", "search_value": 999999997, "turn": 9, "player": "X"}
+{"move": [6, 6], "elapsed_ms": 670.3177999997934, "nodes": 961, "depth": null, "iterations": 1000, "algorithm": "MCTS", "search_value": null, "turn": 10, "player": "O"}
+{"move": [1, 1], "elapsed_ms": 654.1974000001574, "nodes": 1872, "depth": 5, "iterations": null, "algorithm": "AlphaBeta", "search_value": 999999999, "turn": 11, "player": "X"}

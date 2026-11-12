@@ -1,0 +1,115 @@
+{
+  "date_utc": "2026-11-11 09:09:14 UTC",
+  "machine": "Windows-10-10.0.26300-SP0",
+  "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "logical_cpus": 16,
+  "python": "3.11.9",
+  "parameters": {
+    "preset": "smoke",
+    "group": "all",
+    "games": 2,
+    "seed": 2026,
+    "depth": 2,
+    "c": 1.4,
+    "fixed_iterations": 8,
+    "rollout_iterations": 8,
+    "opponent": "Random",
+    "output": "experiments/results/smoke_all"
+  },
+  "configurations": [
+    [
+      "baseline",
+      "Random",
+      "Random",
+      8,
+      1.4
+    ],
+    [
+      "baseline",
+      "AlphaBeta",
+      "Random",
+      8,
+      1.4
+    ],
+    [
+      "baseline",
+      "MCTS",
+      "Random",
+      8,
+      1.4
+    ],
+    [
+      "head_to_head",
+      "MCTS",
+      "AlphaBeta",
+      8,
+      1.4
+    ],
+    [
+      "uct_c",
+      "MCTS",
+      "Random",
+      8,
+      0.5
+    ],
+    [
+      "uct_c",
+      "MCTS",
+      "Random",
+      8,
+      1.0
+    ],
+    [
+      "uct_c",
+      "MCTS",
+      "Random",
+      8,
+      1.4
+    ],
+    [
+      "uct_c",
+      "MCTS",
+      "Random",
+      8,
+      2.0
+    ],
+    [
+      "iterations",
+      "MCTS",
+      "Random",
+      2,
+      1.4
+    ],
+    [
+      "iterations",
+      "MCTS",
+      "Random",
+      4,
+      1.4
+    ],
+    [
+      "iterations",
+      "MCTS",
+      "Random",
+      8,
+      1.4
+    ],
+    [
+      "rollout",
+      "MCTS",
+      "MCTS",
+      8,
+      1.4
+    ],
+    [
+      "connect4",
+      "MCTS",
+      "Random",
+      8,
+      1.4
+    ]
+  ],
+  "timing": "Wall clock per agent decision using perf_counter, no time cap.",
+  "pairing": "Each pair swaps X/O and retains each agent's seed.",
+  "game_rule": "X moves first. Only completed games contribute to results."
+}

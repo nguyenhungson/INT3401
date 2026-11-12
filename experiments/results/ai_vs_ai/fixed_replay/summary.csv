@@ -1,0 +1,5 @@
+matchup_id,group,game,slot,agent,depth,iterations,c,rollout,tactical,planned_games,completed_games,wins,draws,losses,games_as_x,wins_as_x,win_rate_as_x,games_as_o,wins_as_o,win_rate_as_o,avg_game_moves,avg_move_ms,unique_move_sequences,repeated_move_sequences,both_agents_deterministic
+replay__caro__ab_0_mcts_0,replay,caro,A,alphabeta,5,,,,False,1,1,1,0,0,1,1,1.0,0,0,,17.0,514.76355667,1,0,False
+replay__caro__ab_0_mcts_0,replay,caro,B,mcts,,1000,1.4,random,False,1,1,0,0,1,0,0,,1,0,0.0,17.0,349.72805738,1,0,False
+replay__caro__ab_1_mcts_1,replay,caro,A,alphabeta,5,,,,True,1,1,1,0,0,1,1,1.0,0,0,,11.0,621.32647467,1,0,False
+replay__caro__ab_1_mcts_1,replay,caro,B,mcts,,1000,1.4,random,True,1,1,0,0,1,0,0,,1,0,0.0,11.0,373.6532096,1,0,False

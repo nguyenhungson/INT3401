@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "run_id": "smoke_baseline",
+  "preset": "smoke",
+  "groups": [
+    "baseline"
+  ],
+  "games": [
+    "caro",
+    "connect4"
+  ],
+  "seed_schedule": [
+    [
+      2026,
+      2027
+    ]
+  ],
+  "replay_seeds": {
+    "X": 42,
+    "O": 43
+  },
+  "coordinate_base": 0,
+  "x_moves_first": true,
+  "matchups": [
+    {
+      "matchup_id": "baseline__caro__random_vs_random",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__random_vs_minimax",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "minimax",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__random_vs_alphabeta",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "alphabeta",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__random_vs_mcts",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__minimax_vs_minimax",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "minimax",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "minimax",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__minimax_vs_alphabeta",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "minimax",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "alphabeta",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__minimax_vs_mcts",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "minimax",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__alphabeta_vs_alphabeta",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "alphabeta",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "alphabeta",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__alphabeta_vs_mcts",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "alphabeta",
+        "depth": 2,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__caro__mcts_vs_mcts",
+      "group": "baseline",
+      "game": "caro",
+      "agent_a": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__connect4__random_vs_random",
+      "group": "baseline",
+      "game": "connect4",
+      "agent_a": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__connect4__random_vs_mcts",
+      "group": "baseline",
+      "game": "connect4",
+      "agent_a": {
+        "name": "random",
+        "depth": null,
+        "iterations": null,
+        "c": null,
+        "rollout": null,
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      }
+    },
+    {
+      "matchup_id": "baseline__connect4__mcts_vs_mcts",
+      "group": "baseline",
+      "game": "connect4",
+      "agent_a": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      },
+      "agent_b": {
+        "name": "mcts",
+        "depth": null,
+        "iterations": 300,
+        "c": 1.4,
+        "rollout": "random",
+        "tactical": false
+      }
+    }
+  ],
+  "planned_games": 26,
+  "completed_games": 26,
+  "status": "complete",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-m",
+    "experiments.ai_vs_ai_matrix",
+    "--preset",
+    "smoke",
+    "--group",
+    "baseline",
+    "--run-id",
+    "smoke_baseline"
+  ],
+  "created_at_utc": "2026-11-10T19:07:39+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "pending_games": 0,
+  "missing_game_ids": [],
+  "error_attempts": 0,
+  "updated_at_utc": "2026-11-10T19:07:50+00:00"
+}

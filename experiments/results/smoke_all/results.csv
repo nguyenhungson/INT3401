@@ -1,0 +1,14 @@
+configuration,experiment,game,focal,opponent,focal_rollout,opponent_rollout,games,wins,draws,losses,win_rate,draw_rate,loss_rate,avg_move_ms,avg_game_length,depth,iterations,c,seed,wall_seconds
+1,baseline,caro,Random,Random,,,2,0,1,1,0.0,0.5,0.5,0.011045,75.5,2,8,1.4,2026,0.004
+2,baseline,caro,AlphaBeta,Random,,,2,2,0,0,1.0,0.0,0.0,17.263846,12.5,2,8,1.4,2026,0.226
+3,baseline,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,7.764857,27.5,2,8,1.4,2026,0.22
+4,head_to_head,caro,MCTS,AlphaBeta,random,,2,0,0,2,0.0,0.0,1.0,8.04978,10.5,2,8,1.4,2026,0.273
+5,uct_c,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,7.152871,27.5,2,8,0.5,2026,0.202
+6,uct_c,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,7.667575,27.5,2,8,1.0,2026,0.217
+7,uct_c,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,7.214571,27.5,2,8,1.4,2026,0.204
+8,uct_c,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,6.654218,27.5,2,8,2.0,2026,0.188
+9,iterations,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,1.909227,44.5,2,2,1.4,2026,0.089
+10,iterations,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,3.161531,53.5,2,4,1.4,2026,0.174
+11,iterations,caro,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,6.737475,27.5,2,8,1.4,2026,0.191
+12,rollout,caro,MCTS,MCTS,heuristic,random,2,1,0,1,0.5,0.0,0.5,14.423878,37,2,8,1.4,2026,0.762
+13,connect4,connect4,MCTS,Random,random,,2,2,0,0,1.0,0.0,0.0,1.101604,25.5,2,8,1.4,2026,0.03
