@@ -1,0 +1,221 @@
+{
+  "initial_cells": [
+    [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      0
+    ],
+    [
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      0
+    ]
+  ],
+  "first_player": -1,
+  "coordinate_base": 0,
+  "moves": [
+    {
+      "player": -1,
+      "move": [
+        0,
+        7
+      ],
+      "elapsed_ms": 189.33550000656396,
+      "nodes": 6001,
+      "depth": null,
+      "iterations": 0,
+      "algorithm": "MCTS",
+      "search_value": 0,
+      "solved": true
+    },
+    {
+      "player": 1,
+      "move": [
+        0,
+        8
+      ],
+      "elapsed_ms": 90.45690001221374,
+      "nodes": 1870,
+      "depth": 7,
+      "iterations": null,
+      "algorithm": "AlphaBeta",
+      "search_value": 0,
+      "solved": true
+    },
+    {
+      "player": -1,
+      "move": [
+        1,
+        0
+      ],
+      "elapsed_ms": 19.270199991296977,
+      "nodes": 577,
+      "depth": null,
+      "iterations": 0,
+      "algorithm": "MCTS",
+      "search_value": 0,
+      "solved": true
+    },
+    {
+      "player": 1,
+      "move": [
+        1,
+        7
+      ],
+      "elapsed_ms": 7.029600004898384,
+      "nodes": 176,
+      "depth": 5,
+      "iterations": null,
+      "algorithm": "AlphaBeta",
+      "search_value": 0,
+      "solved": true
+    },
+    {
+      "player": -1,
+      "move": [
+        1,
+        8
+      ],
+      "elapsed_ms": 2.500800008419901,
+      "nodes": 53,
+      "depth": null,
+      "iterations": 0,
+      "algorithm": "MCTS",
+      "search_value": 0,
+      "solved": true
+    },
+    {
+      "player": 1,
+      "move": [
+        2,
+        0
+      ],
+      "elapsed_ms": 0.9851000213529915,
+      "nodes": 16,
+      "depth": 3,
+      "iterations": null,
+      "algorithm": "AlphaBeta",
+      "search_value": 0,
+      "solved": true
+    },
+    {
+      "player": -1,
+      "move": [
+        2,
+        8
+      ],
+      "elapsed_ms": 0.6050999800208956,
+      "nodes": 5,
+      "depth": null,
+      "iterations": 0,
+      "algorithm": "MCTS",
+      "search_value": 0,
+      "solved": true
+    },
+    {
+      "player": 1,
+      "move": [
+        8,
+        8
+      ],
+      "elapsed_ms": 0.4760000156238675,
+      "nodes": 2,
+      "depth": 1,
+      "iterations": null,
+      "algorithm": "AlphaBeta",
+      "search_value": 0,
+      "solved": true
+    }
+  ],
+  "result": 2,
+  "result_name": "draw"
+}

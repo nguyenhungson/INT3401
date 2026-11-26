@@ -35,14 +35,22 @@ def make_agent(
     alpha_beta: bool | None = None,
     *,
     tactical: bool = False,
+    strong: bool = False,
+    time_limit: float = 3.0,
 ) -> Agent:
     if name == "random":
         return RandomAgent(seed)
     if name in ("minimax", "alphabeta"):
         pruning = name == "alphabeta" if alpha_beta is None else alpha_beta
-        return MinimaxAgent(depth, alpha_beta=pruning, prefer_quick_wins=tactical)
+        return MinimaxAgent(
+            depth, alpha_beta=pruning, prefer_quick_wins=tactical or strong,
+            strong=strong, time_limit=time_limit,
+        )
     if name == "mcts":
-        return MCTSAgent(iterations, c, seed, rollout=rollout, tactical_root=tactical)
+        return MCTSAgent(
+            iterations, c, seed, rollout=rollout, tactical_root=tactical,
+            strong=strong, time_limit=time_limit,
+        )
     raise ValueError(f"Thuật toán không hợp lệ: {name}")
 
 
@@ -73,6 +81,7 @@ def run(args: argparse.Namespace) -> str:
             agents[player] = make_agent(
                 name, args.depth, args.iterations, args.c, seed,
                 args.rollout, args.alpha_beta, tactical=args.tactical,
+                strong=args.strong, time_limit=args.time_limit,
             )
 
     log_path = Path(args.log)
@@ -100,6 +109,7 @@ def run(args: argparse.Namespace) -> str:
                     f"{decision.elapsed_ms:.2f} ms | nút={decision.nodes} | "
                     f"độ sâu={decision.depth or '—'} | "
                     f"mô phỏng={decision.iterations or '—'}"
+                    f" | đã giải chính xác={decision.solved}"
                 )
 
             board.play(*move, player)
@@ -136,6 +146,14 @@ def main() -> None:
         help="Ưu tiên thắng sớm trong MiniMax và xử lý nước bắt buộc tại gốc MCTS.",
     )
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--strong", action="store_true",
+        help="Tìm kiếm theo thời gian, xử lý chiến thuật và giải thế cuối ≤8 ô trống.",
+    )
+    parser.add_argument(
+        "--time-limit", type=float, default=3.0,
+        help="Ngân sách giây mỗi nước khi bật --strong (mặc định 3).",
+    )
     parser.add_argument("--log", default="experiments/results/game_log.jsonl")
     parser.add_argument(
         "--quiet", action="store_true", help="Ẩn bàn trung gian khi máy đi."
@@ -161,6 +179,8 @@ def main() -> None:
         parser.error("--depth và --iterations phải là số nguyên dương.")
     if not math.isfinite(args.c) or args.c <= 0:
         parser.error("--c phải là số hữu hạn lớn hơn 0.")
+    if not math.isfinite(args.time_limit) or args.time_limit <= 0:
+        parser.error("--time-limit phải hữu hạn và lớn hơn 0.")
     if args.game == "connect4" and {"minimax", "alphabeta"} & {args.x, args.o}:
         parser.error("Connect Four hỗ trợ Random và MCTS. MiniMax dùng cho Caro.")
 

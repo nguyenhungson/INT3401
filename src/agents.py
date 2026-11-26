@@ -15,6 +15,7 @@ class GameBoard(Protocol):
 
     status: int
     move_count: int
+    cells: list[list[int]]
 
     def copy(self) -> GameBoard: ...
     def legal_moves(self) -> list[Move]: ...
@@ -37,6 +38,7 @@ class Decision:
     iterations: int | None = None
     algorithm: str = ""
     search_value: int | None = None
+    solved: bool = False
 
     def as_dict(self) -> dict:
         detail = asdict(self)
