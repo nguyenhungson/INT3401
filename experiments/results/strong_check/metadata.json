@@ -1,0 +1,29 @@
+{
+  "command": "python -m src.main --game caro --mode ai-ai --agent1 alphabeta --agent2 mcts --depth 10 --iterations 100000 --rollout heuristic --strong --time-limit 3 --seed 100 --quiet",
+  "full_game": {
+    "log": "caro_strong_seed100.jsonl",
+    "turns": 21,
+    "winner": "X",
+    "max_decision_ms": 3046.52
+  },
+  "exact_endgame": {
+    "log": "exact_endgame_demo.json",
+    "starting_empty_cells": 8,
+    "turns": 8,
+    "winner": "draw",
+    "all_decisions_certified": true
+  },
+  "tests": {
+    "passed": 50,
+    "subtests_passed": 17
+  },
+  "source_sha256": {
+    "README.md": "406c6aaf9dffcc5927367f47caad726f5891889d909db69a5dadef77079f9450",
+    "src/agents.py": "497cee13ea4d9c09f21a1caf6215669bce0f45ea53f67963104cf85905a31837",
+    "src/main.py": "3ee217040b3e89691e25707529b5d66020317ff625f2f657686db8ad1f929997",
+    "src/mcts.py": "f72acdd7f2bfbdc5efe88a9bbdc8c7872e61b4cef254c4889756bef5a034a09a",
+    "src/minimax.py": "bf019a44fb2fadd6fa43d9eed64878d3afc5b486cbf6c1ddcc5ce160eb071d29",
+    "src/search_tools.py": "9698d31f56b4a77bd13b2bf682114bbe1b8960b4ecfff75fdfa4e66b6098a7cf",
+    "tests/test_strong.py": "5240891b0c17810df68dfcc817289e57c8f83fb6a10dd82c62e677d0321d52dd"
+  }
+}

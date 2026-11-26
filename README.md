@@ -1,5 +1,30 @@
 # Caro 9×9 và Connect Four
 
+Chế độ chơi mạnh dùng cờ `--strong --time-limit 3`. Alpha-Beta tăng dần
+độ sâu trong ngân sách mỗi lượt. MCTS xử lý nước thắng và chặn tại các nút
+cây. Cả hai có phép chứng minh thắng ngay, tạo hai đe dọa thắng và giải
+thế cuối tối đa 8 ô trống bằng cách xét các nước hợp lệ tới kết thúc.
+
+```powershell
+python -m src.main --game caro --mode ai-ai --agent1 alphabeta --agent2 mcts --depth 10 --iterations 100000 --rollout heuristic --strong --time-limit 3 --seed 100 --quiet --log experiments/results/caro_strong.jsonl
+```
+
+`--time-limit` tính theo giây và có thể vượt nhẹ do hoàn tất một bước đang
+xử lý. `depth` ghi độ sâu đã hoàn tất, `iterations` ghi số mô phỏng đã
+hoàn tất. Cờ `solved=true` trong JSONL chứng nhận giá trị thắng/hòa/thua
+1/0/-1 từ góc nhìn bên chọn nước. Khi `solved=false`, điểm MiniMax là
+ước lượng theo độ sâu, MCTS dựa vào số lượt thăm.
+
+Mục tiêu của mỗi bên là thắng khi có thể và giữ hòa khi không thể thắng.
+Kết quả một ván hòa chỉ xác nhận diễn biến của ván đó. Các thí nghiệm cũ
+trong gói được chạy trước khi bổ sung chế độ strong.
+
+Kiểm chứng chế độ strong gồm 50 test đạt. Trong ván thử từ bàn trống,
+seed 100, ngân sách 3 giây mỗi nước, X Alpha-Beta thắng sau 21 lượt.
+Thế cuối lấy từ ván hòa gốc còn 8 ô trống được giải tới kết thúc, với
+cả 8 quyết định đều chứng minh giá trị hòa. Log của hai phép thử nằm tại
+`experiments/results/strong_check/`.
+
 Bài tập lớn AI giữa kỳ 2026–2027. Caro có Random, MiniMax, Alpha-Beta và
 MCTS + UCT. Connect Four có Random và dùng lại cùng bộ tìm kiếm MCTS.
 Cả hai trò có chế độ người đấu máy và máy đấu máy.
